@@ -14,6 +14,9 @@
 		59C9DCBE1AE8AA6000FEE832 /* Tendigi_TwitterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C9DCBD1AE8AA6000FEE832 /* Tendigi_TwitterTests.m */; };
 		59C9DCCB1AE8ADCD00FEE832 /* TDMainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C9DCCA1AE8ADCD00FEE832 /* TDMainNavigationController.m */; };
 		59C9DCCE1AE8ADE900FEE832 /* TDMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C9DCCD1AE8ADE900FEE832 /* TDMainTableViewController.m */; };
+		59C9DCD31AE8AF0C00FEE832 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59C9DCD01AE8AF0C00FEE832 /* TwitterKit.framework */; };
+		59C9DCD41AE8AF0C00FEE832 /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 59C9DCD11AE8AF0C00FEE832 /* TwitterKitResources.bundle */; };
+		59C9DCD51AE8AF0C00FEE832 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59C9DCD21AE8AF0C00FEE832 /* Fabric.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +45,9 @@
 		59C9DCCA1AE8ADCD00FEE832 /* TDMainNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDMainNavigationController.m; sourceTree = "<group>"; };
 		59C9DCCC1AE8ADE900FEE832 /* TDMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDMainTableViewController.h; sourceTree = "<group>"; };
 		59C9DCCD1AE8ADE900FEE832 /* TDMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDMainTableViewController.m; sourceTree = "<group>"; };
+		59C9DCD01AE8AF0C00FEE832 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = SOURCE_ROOT; };
+		59C9DCD11AE8AF0C00FEE832 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = SOURCE_ROOT; };
+		59C9DCD21AE8AF0C00FEE832 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +55,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59C9DCD31AE8AF0C00FEE832 /* TwitterKit.framework in Frameworks */,
+				59C9DCD51AE8AF0C00FEE832 /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +91,9 @@
 		59C9DCA01AE8AA6000FEE832 /* Tendigi_Twitter */ = {
 			isa = PBXGroup;
 			children = (
+				59C9DCD01AE8AF0C00FEE832 /* TwitterKit.framework */,
+				59C9DCD11AE8AF0C00FEE832 /* TwitterKitResources.bundle */,
+				59C9DCD21AE8AF0C00FEE832 /* Fabric.framework */,
 				59C9DCA51AE8AA6000FEE832 /* AppDelegate.h */,
 				59C9DCA61AE8AA6000FEE832 /* AppDelegate.m */,
 				59C9DCAE1AE8AA6000FEE832 /* Images.xcassets */,
@@ -149,6 +160,7 @@
 				59C9DC9A1AE8AA6000FEE832 /* Sources */,
 				59C9DC9B1AE8AA6000FEE832 /* Frameworks */,
 				59C9DC9C1AE8AA6000FEE832 /* Resources */,
+				59C9DCCF1AE8AEFC00FEE832 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -219,6 +231,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59C9DCD41AE8AF0C00FEE832 /* TwitterKitResources.bundle in Resources */,
 				59C9DCAF1AE8AA6000FEE832 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -231,6 +244,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		59C9DCCF1AE8AEFC00FEE832 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 3c0d377908d0fd7f002f9db92b32163700bdf908 7d40fd000e43ad3fc0c6d807c58f5404331cc62ded2a6731c86e37919353608a";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		59C9DC9A1AE8AA6000FEE832 /* Sources */ = {
@@ -344,6 +373,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Tendigi_Twitter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -354,6 +387,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Tendigi_Twitter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

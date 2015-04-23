@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 #import "TDMainNavigationController.h"
+#import <Fabric/Fabric.h>
+#import <TwitterKit/TwitterKit.h>
+
 
 
 
@@ -24,6 +27,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+	
+	[Fabric with:@[TwitterKit]];
 	// Override point for customization after application launch.
 	_window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
 	[self.window setBackgroundColor:[UIColor whiteColor]];
