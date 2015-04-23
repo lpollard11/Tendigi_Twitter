@@ -8,6 +8,7 @@
 
 #import "TDMainTableViewController.h"
 #import <TwitterKit/TwitterKit.h>
+#import "TDWebViewController.h"
 
 
 
@@ -173,6 +174,16 @@ static NSString * const TweetTableReuseIdentifier = @"TweetCell";
 	TWTRTweet *tweet = self.tweets[indexPath.row];
  
 	return [TWTRTweetTableViewCell heightForTweet:tweet width:CGRectGetWidth(self.view.bounds)];
+}
+
+#pragma mark - Tweet View Delegate
+-(void)tweetView:(TWTRTweetView *)tweetView didSelectTweet:(TWTRTweet *)tweet
+{
+	NSURL *tweetURL = tweet.permalink;
+	
+	TDWebViewController *webView = [TDWebViewController new];
+	[webView setUrl:tweetURL];
+	[self.navigationController pushViewController:webView animated:YES];
 }
 
 

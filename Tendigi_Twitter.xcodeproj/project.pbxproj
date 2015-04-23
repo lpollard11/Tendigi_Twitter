@@ -17,6 +17,7 @@
 		59C9DCD31AE8AF0C00FEE832 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59C9DCD01AE8AF0C00FEE832 /* TwitterKit.framework */; };
 		59C9DCD41AE8AF0C00FEE832 /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 59C9DCD11AE8AF0C00FEE832 /* TwitterKitResources.bundle */; };
 		59C9DCD51AE8AF0C00FEE832 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59C9DCD21AE8AF0C00FEE832 /* Fabric.framework */; };
+		59C9DCE01AE8B5D900FEE832 /* TDWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C9DCDF1AE8B5D900FEE832 /* TDWebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,8 @@
 		59C9DCD01AE8AF0C00FEE832 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = SOURCE_ROOT; };
 		59C9DCD11AE8AF0C00FEE832 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = SOURCE_ROOT; };
 		59C9DCD21AE8AF0C00FEE832 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
+		59C9DCDE1AE8B5D900FEE832 /* TDWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDWebViewController.h; sourceTree = "<group>"; };
+		59C9DCDF1AE8B5D900FEE832 /* TDWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDWebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,13 +94,13 @@
 		59C9DCA01AE8AA6000FEE832 /* Tendigi_Twitter */ = {
 			isa = PBXGroup;
 			children = (
-				59C9DCD01AE8AF0C00FEE832 /* TwitterKit.framework */,
-				59C9DCD11AE8AF0C00FEE832 /* TwitterKitResources.bundle */,
-				59C9DCD21AE8AF0C00FEE832 /* Fabric.framework */,
 				59C9DCA51AE8AA6000FEE832 /* AppDelegate.h */,
 				59C9DCA61AE8AA6000FEE832 /* AppDelegate.m */,
+				59C9DCD21AE8AF0C00FEE832 /* Fabric.framework */,
 				59C9DCAE1AE8AA6000FEE832 /* Images.xcassets */,
 				59C9DCA11AE8AA6000FEE832 /* Supporting Files */,
+				59C9DCD01AE8AF0C00FEE832 /* TwitterKit.framework */,
+				59C9DCD11AE8AF0C00FEE832 /* TwitterKitResources.bundle */,
 				59C9DCC71AE8ADAC00FEE832 /* UINavigatonController */,
 				59C9DCC81AE8ADAD00FEE832 /* UIViewController */,
 				59C9DCA81AE8AA6000FEE832 /* ViewController.h */,
@@ -146,6 +149,8 @@
 			children = (
 				59C9DCCC1AE8ADE900FEE832 /* TDMainTableViewController.h */,
 				59C9DCCD1AE8ADE900FEE832 /* TDMainTableViewController.m */,
+				59C9DCDE1AE8B5D900FEE832 /* TDWebViewController.h */,
+				59C9DCDF1AE8B5D900FEE832 /* TDWebViewController.m */,
 			);
 			path = UIViewController;
 			sourceTree = "<group>";
@@ -267,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				59C9DCCB1AE8ADCD00FEE832 /* TDMainNavigationController.m in Sources */,
+				59C9DCE01AE8B5D900FEE832 /* TDWebViewController.m in Sources */,
 				59C9DCCE1AE8ADE900FEE832 /* TDMainTableViewController.m in Sources */,
 				59C9DCAA1AE8AA6000FEE832 /* ViewController.m in Sources */,
 				59C9DCA71AE8AA6000FEE832 /* AppDelegate.m in Sources */,
