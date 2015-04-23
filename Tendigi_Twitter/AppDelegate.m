@@ -7,16 +7,31 @@
 //
 
 #import "AppDelegate.h"
+#import "TDMainNavigationController.h"
+
+
+
 
 @interface AppDelegate ()
 
 @end
+
+
+
+
 
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	// Override point for customization after application launch.
+	_window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+	[self.window setBackgroundColor:[UIColor whiteColor]];
+	[self.window makeKeyAndVisible];
+	
+	TDMainNavigationController *mainNavigationController = [TDMainNavigationController new];
+	[self.window setRootViewController:mainNavigationController];
+	
 	return YES;
 }
 
