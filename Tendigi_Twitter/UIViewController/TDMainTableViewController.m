@@ -180,9 +180,15 @@ static NSString * const TweetTableReuseIdentifier = @"TweetCell";
 -(void)tweetView:(TWTRTweetView *)tweetView didSelectTweet:(TWTRTweet *)tweet
 {
 	NSURL *tweetURL = tweet.permalink;
-	
 	TDWebViewController *webView = [TDWebViewController new];
 	[webView setUrl:tweetURL];
+	[self.navigationController pushViewController:webView animated:YES];
+}
+
+-(void)tweetView:(TWTRTweetView *)tweetView didTapURL:(NSURL *)url
+{
+	TDWebViewController *webView = [TDWebViewController new];
+	[webView setUrl:url];
 	[self.navigationController pushViewController:webView animated:YES];
 }
 
