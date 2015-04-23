@@ -79,7 +79,7 @@ static NSString * const TweetTableReuseIdentifier = @"TweetCell";
 -(void)loadTweets
 {
 	NSString *statusesShowEndpoint = @"https://api.twitter.com/1.1/statuses/lookup.json";
-	NSDictionary *params = @{@"id" : @"510908133917487104"};
+	NSDictionary *params = @{@"id" : @"Tendigi"};
 	NSError *clientError;
 	NSURLRequest *request = [[[Twitter sharedInstance] APIClient]
 							 URLRequestWithMethod:@"GET"
@@ -102,16 +102,18 @@ static NSString * const TweetTableReuseIdentifier = @"TweetCell";
 								  JSONObjectWithData:data
 								  options:0
 								  error:&jsonError];
-				 
-				 NSDictionary *json1 = [json objectAtIndex:0];
-				 if ([json1 isKindOfClass:[NSDictionary class]])
+				 if (json.count != 0)
 				 {
-					 TWTRTweet *tweet = [[TWTRTweet alloc] initWithJSONDictionary:json1];
-					 if (tweet)
+					 NSDictionary *json1 = [json objectAtIndex:0];
+					 if ([json1 isKindOfClass:[NSDictionary class]])
 					 {
-						 NSString *tweetID = tweet.tweetID;
-						 [self.loadedTweetIDs addObject:tweetID];
-						 [self loadWithTweetIDs];
+						 TWTRTweet *tweet = [[TWTRTweet alloc] initWithJSONDictionary:json1];
+						 if (tweet)
+						 {
+							 NSString *tweetID = tweet.tweetID;
+							 [self.loadedTweetIDs addObject:tweetID];
+							 [self loadWithTweetIDs];
+						 }
 					 }
 				 }
 			 }
