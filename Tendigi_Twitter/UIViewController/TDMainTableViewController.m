@@ -9,6 +9,7 @@
 #import "TDMainTableViewController.h"
 #import <TwitterKit/TwitterKit.h>
 #import "TDWebViewController.h"
+#import <FXReachability/FXReachability.h>
 
 
 
@@ -64,8 +65,13 @@ static NSString * const TweetTableReuseIdentifier = @"TweetCell";
 	[super viewWillAppear:YES];
 	
 	_loadedTweetIDs = [NSMutableArray new];
-	
-	[self guestLogin];
+
+	BOOL reachable = [FXReachability isReachable];
+
+	if (reachable == YES)
+	{
+		[self guestLogin];
+	}
 }
 
 -(void)didTrigger_tableViewRefreshControl
