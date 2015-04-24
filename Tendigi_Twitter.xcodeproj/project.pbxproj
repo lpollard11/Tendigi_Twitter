@@ -17,6 +17,7 @@
 		59C9DCD41AE8AF0C00FEE832 /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 59C9DCD11AE8AF0C00FEE832 /* TwitterKitResources.bundle */; };
 		59C9DCD51AE8AF0C00FEE832 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59C9DCD21AE8AF0C00FEE832 /* Fabric.framework */; };
 		59C9DCE01AE8B5D900FEE832 /* TDWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C9DCDF1AE8B5D900FEE832 /* TDWebViewController.m */; };
+		7AE95BA694BECEAF1A6729B3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 177152B6A75F5628961A1885 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0EF29FCE6B85AC27611F9848 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		177152B6A75F5628961A1885 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		59C9DC9E1AE8AA6000FEE832 /* Tendigi_Twitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tendigi_Twitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59C9DCA21AE8AA6000FEE832 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		59C9DCA31AE8AA6000FEE832 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -48,6 +51,7 @@
 		59C9DCD21AE8AF0C00FEE832 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
 		59C9DCDE1AE8B5D900FEE832 /* TDWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDWebViewController.h; sourceTree = "<group>"; };
 		59C9DCDF1AE8B5D900FEE832 /* TDWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDWebViewController.m; sourceTree = "<group>"; };
+		6F34E9B388A21DC1EB84ABEB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,7 @@
 			files = (
 				59C9DCD31AE8AF0C00FEE832 /* TwitterKit.framework in Frameworks */,
 				59C9DCD51AE8AF0C00FEE832 /* Fabric.framework in Frameworks */,
+				7AE95BA694BECEAF1A6729B3 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +75,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		31B07DB32D30FFEFFA96F312 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				177152B6A75F5628961A1885 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		59C9DC951AE8AA6000FEE832 = {
 			isa = PBXGroup;
 			children = (
 				59C9DCA01AE8AA6000FEE832 /* Tendigi_Twitter */,
 				59C9DCBA1AE8AA6000FEE832 /* Tendigi_TwitterTests */,
 				59C9DC9F1AE8AA6000FEE832 /* Products */,
+				F049706A105E8B0CADE8E0E6 /* Pods */,
+				31B07DB32D30FFEFFA96F312 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -150,6 +165,15 @@
 			path = UIViewController;
 			sourceTree = "<group>";
 		};
+		F049706A105E8B0CADE8E0E6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0EF29FCE6B85AC27611F9848 /* Pods.debug.xcconfig */,
+				6F34E9B388A21DC1EB84ABEB /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -157,10 +181,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 59C9DCC11AE8AA6000FEE832 /* Build configuration list for PBXNativeTarget "Tendigi_Twitter" */;
 			buildPhases = (
+				BCBD1CB17ED09993745FE5DF /* Check Pods Manifest.lock */,
 				59C9DC9A1AE8AA6000FEE832 /* Sources */,
 				59C9DC9B1AE8AA6000FEE832 /* Frameworks */,
 				59C9DC9C1AE8AA6000FEE832 /* Resources */,
 				59C9DCCF1AE8AEFC00FEE832 /* ShellScript */,
+				9F3533944643FEFEE72945A6 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -258,6 +284,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "./Fabric.framework/run 3c0d377908d0fd7f002f9db92b32163700bdf908 7d40fd000e43ad3fc0c6d807c58f5404331cc62ded2a6731c86e37919353608a";
+		};
+		9F3533944643FEFEE72945A6 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BCBD1CB17ED09993745FE5DF /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -371,6 +427,7 @@
 		};
 		59C9DCC21AE8AA6000FEE832 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EF29FCE6B85AC27611F9848 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -385,6 +442,7 @@
 		};
 		59C9DCC31AE8AA6000FEE832 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F34E9B388A21DC1EB84ABEB /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -450,6 +508,7 @@
 				59C9DCC31AE8AA6000FEE832 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		59C9DCC41AE8AA6000FEE832 /* Build configuration list for PBXNativeTarget "Tendigi_TwitterTests" */ = {
 			isa = XCConfigurationList;
@@ -458,6 +517,7 @@
 				59C9DCC61AE8AA6000FEE832 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
