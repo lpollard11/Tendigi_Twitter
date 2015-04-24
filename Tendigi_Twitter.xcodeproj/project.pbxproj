@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		59C9DCA41AE8AA6000FEE832 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C9DCA31AE8AA6000FEE832 /* main.m */; };
 		59C9DCA71AE8AA6000FEE832 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C9DCA61AE8AA6000FEE832 /* AppDelegate.m */; };
-		59C9DCAA1AE8AA6000FEE832 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C9DCA91AE8AA6000FEE832 /* ViewController.m */; };
 		59C9DCAF1AE8AA6000FEE832 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59C9DCAE1AE8AA6000FEE832 /* Images.xcassets */; };
 		59C9DCBE1AE8AA6000FEE832 /* Tendigi_TwitterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C9DCBD1AE8AA6000FEE832 /* Tendigi_TwitterTests.m */; };
 		59C9DCCB1AE8ADCD00FEE832 /* TDMainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C9DCCA1AE8ADCD00FEE832 /* TDMainNavigationController.m */; };
@@ -36,8 +35,6 @@
 		59C9DCA31AE8AA6000FEE832 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		59C9DCA51AE8AA6000FEE832 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		59C9DCA61AE8AA6000FEE832 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		59C9DCA81AE8AA6000FEE832 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		59C9DCA91AE8AA6000FEE832 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		59C9DCAE1AE8AA6000FEE832 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		59C9DCB71AE8AA6000FEE832 /* Tendigi_TwitterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tendigi_TwitterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		59C9DCBC1AE8AA6000FEE832 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -103,8 +100,6 @@
 				59C9DCD11AE8AF0C00FEE832 /* TwitterKitResources.bundle */,
 				59C9DCC71AE8ADAC00FEE832 /* UINavigatonController */,
 				59C9DCC81AE8ADAD00FEE832 /* UIViewController */,
-				59C9DCA81AE8AA6000FEE832 /* ViewController.h */,
-				59C9DCA91AE8AA6000FEE832 /* ViewController.m */,
 			);
 			path = Tendigi_Twitter;
 			sourceTree = "<group>";
@@ -274,7 +269,6 @@
 				59C9DCCB1AE8ADCD00FEE832 /* TDMainNavigationController.m in Sources */,
 				59C9DCE01AE8B5D900FEE832 /* TDWebViewController.m in Sources */,
 				59C9DCCE1AE8ADE900FEE832 /* TDMainTableViewController.m in Sources */,
-				59C9DCAA1AE8AA6000FEE832 /* ViewController.m in Sources */,
 				59C9DCA71AE8AA6000FEE832 /* AppDelegate.m in Sources */,
 				59C9DCA41AE8AA6000FEE832 /* main.m in Sources */,
 			);

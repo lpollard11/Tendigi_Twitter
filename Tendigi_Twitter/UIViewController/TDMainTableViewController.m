@@ -28,6 +28,9 @@ static NSString * const TweetTableReuseIdentifier = @"TweetCell";
 -(void)guestLogin;
 -(void)loadWithTweetIDs;
 
+@property (nonatomic, readonly) UIRefreshControl* tableViewRefreshControl;
+-(void)didTrigger_tableViewRefreshControl;
+
 @end
 
 
@@ -50,6 +53,10 @@ static NSString * const TweetTableReuseIdentifier = @"TweetCell";
 	self.tableView.allowsSelection = NO;
 	[self.tableView registerClass:[TWTRTweetTableViewCell class] forCellReuseIdentifier:TweetTableReuseIdentifier];
 	
+	_tableViewRefreshControl = [UIRefreshControl new];
+	[self.tableViewRefreshControl addTarget:self action:@selector(didTrigger_tableViewRefreshControl) forControlEvents:UIControlEventValueChanged];
+	[self.tableView addSubview:self.tableViewRefreshControl];
+	
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -59,6 +66,12 @@ static NSString * const TweetTableReuseIdentifier = @"TweetCell";
 	_loadedTweetIDs = [NSMutableArray new];
 	
 	[self guestLogin];
+}
+
+-(void)didTrigger_tableViewRefreshControl
+{
+	[self loadTweets];
+	[self.tableViewRefreshControl endRefreshing];
 }
 
 #pragma mark - Load Tweets
