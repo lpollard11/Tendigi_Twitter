@@ -47,6 +47,7 @@ static NSString * const TweetTableReuseIdentifier = @"TweetCell";
 	//	NSArray *tweetIDs = @[@"20", // @jack's first Tweet
 	//						  @"510908133917487104" // our favorite Bike tweet
 	//						  ];
+	[self.navigationItem setTitle:@"@Tendigi"];
 	
 	self.tableView.estimatedRowHeight = 150;
 	self.tableView.rowHeight = UITableViewAutomaticDimension;
